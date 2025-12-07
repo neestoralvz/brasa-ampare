@@ -18,8 +18,10 @@
     <!-- Section Navigation Dots -->
     <nav class="section-nav" aria-label="Navegación por secciones">
         <a href="#inicio" class="section-nav__dot" data-section="inicio" aria-label="Inicio"></a>
+        <a href="#por-que" class="section-nav__dot" data-section="por-que" aria-label="Por qué Brasa Ampare"></a>
         <a href="#paquete" class="section-nav__dot" data-section="paquete" aria-label="Paquete"></a>
         <a href="#como-funciona" class="section-nav__dot" data-section="como-funciona" aria-label="Cómo Funciona"></a>
+        <a href="#contacto" class="section-nav__dot" data-section="contacto" aria-label="Contacto"></a>
     </nav>
 
     <!-- Header -->
@@ -30,8 +32,10 @@
         </a>
         <nav class="header__nav" id="nav-menu">
             <a href="#inicio" class="header__nav-link">Inicio</a>
+            <a href="#por-que" class="header__nav-link">Por Qué</a>
             <a href="#paquete" class="header__nav-link">Paquete</a>
             <a href="#como-funciona" class="header__nav-link">Cómo Funciona</a>
+            <a href="#contacto" class="header__nav-link">Contacto</a>
             <a href="https://wa.me/522282410764?text=Hola,%20me%20interesa%20cotizar%20una%20parrillada" class="header__nav-link header__nav-link--cta">Cotizar</a>
         </nav>
         <button class="header__menu-btn" id="menu-toggle" aria-label="Menú" aria-expanded="false">☰</button>
@@ -57,7 +61,7 @@
     </section>
 
     <!-- Features -->
-    <section class="features">
+    <section class="features" id="por-que">
         <h2 class="section-title">¿Por qué <span class="highlight">Brasa Ampare</span>?</h2>
         <div class="features__grid">
             <!-- Feature 1: Sabor -->
@@ -178,7 +182,7 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="final-cta">
+    <section class="final-cta" id="contacto">
         <h2 class="final-cta__title">¿Listo para tu Parrillada?</h2>
         <p class="final-cta__description">Cotiza sin compromiso. Te respondemos en minutos.</p>
         <a href="https://wa.me/522282410764?text=Hola,%20me%20interesa%20cotizar%20una%20parrillada" class="btn btn-primary">
@@ -246,7 +250,7 @@
 
             // Section navigation dots - track active section
             const sectionDots = document.querySelectorAll('.section-nav__dot');
-            const trackedSections = document.querySelectorAll('#inicio, #paquete, #como-funciona');
+            const trackedSections = document.querySelectorAll('#inicio, #por-que, #paquete, #como-funciona, #contacto');
 
             const sectionObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
