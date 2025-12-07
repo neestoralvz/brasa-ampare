@@ -369,6 +369,11 @@
 /* ---- How it Works ---- */
 .how-it-works {
     background-color: var(--color-white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-margin-top: 0;
 }
 
 .how-it-works__steps {

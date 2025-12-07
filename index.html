@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    <!-- Section Navigation Dots -->
+    <nav class="section-nav" aria-label="Navegación por secciones">
+        <a href="#inicio" class="section-nav__dot" data-section="inicio" aria-label="Inicio"></a>
+        <a href="#paquete" class="section-nav__dot" data-section="paquete" aria-label="Paquete"></a>
+        <a href="#como-funciona" class="section-nav__dot" data-section="como-funciona" aria-label="Cómo Funciona"></a>
+    </nav>
+
     <!-- Header -->
     <header class="header">
         <a href="/" class="header__logo">
@@ -236,6 +243,26 @@
             }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
             document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // Section navigation dots - track active section
+            const sectionDots = document.querySelectorAll('.section-nav__dot');
+            const trackedSections = document.querySelectorAll('#inicio, #paquete, #como-funciona');
+
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.id;
+                        sectionDots.forEach(dot => {
+                            dot.classList.toggle('active', dot.dataset.section === sectionId);
+                        });
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            trackedSections.forEach(section => sectionObserver.observe(section));
+
+            // Set initial active dot
+            sectionDots[0]?.classList.add('active');
         });
     </script>
 </body>
