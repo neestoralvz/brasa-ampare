@@ -1,0 +1,120 @@
+/* ===========================================
+   Components - Brasa Ampare
+   =========================================== */
+
+/* ---- Buttons ---- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: 16px 40px;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    min-width: 250px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-primary {
+    background-color: var(--color-fire);
+    color: var(--color-white);
+    box-shadow: var(--shadow-fire);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 25px rgba(210, 105, 30, 0.5);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+/* ---- Cards ---- */
+.card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+/* ---- Feature Card ---- */
+.feature-card {
+    text-align: center;
+    padding: var(--spacing-md);
+}
+
+.feature-card__image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.feature-card__title {
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.feature-card__description {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
+
+/* ---- Step ---- */
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.step__number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-fire);
+    color: var(--color-white);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-extrabold);
+    flex-shrink: 0;
+}
+
+.step__content h4 {
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-xs);
+    text-transform: uppercase;
+}
+
+.step__content p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
