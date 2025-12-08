@@ -53,6 +53,14 @@
 }
 
 /* ---- Mobile ---- */
+@media (max-width: 767px) {
+    .features__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        padding: 0 var(--spacing-sm);
+    }
+}
+
 @media (max-width: 480px) {
     .hero__title {
         font-size: 2rem;
@@ -74,9 +82,5 @@
 
     .package__grid {
         grid-template-columns: 1fr;
-    }
-
-    .features__grid {
-        gap: var(--spacing-md);
     }
 }
